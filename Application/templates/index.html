@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Ensure proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brain Tumor Detection</title>
+  <style>
+    /* General body styling with a gradient background */
+    body {
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #444;
+    }
+    /* Container styling for centered content with a card-like appearance */
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    /* Heading styling with colored text and a subtle shadow */
+    h1 {
+      color: #d32f2f;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    /* Label styling */
+    label {
+      font-size: 18px;
+      color: #1565c0;
+    }
+    /* File input styling */
+    input[type="file"] {
+      margin: 20px 0;
+      font-size: 16px;
+      border: 2px solid #b0bec5;
+      border-radius: 4px;
+      padding: 5px;
+    }
+    /* Button styling with hover effect */
+    button {
+      background-color: #388e3c;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Brain Tumor Detection</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <!-- Label for file upload -->
+      <label for="file">Upload an image:</label><br>
+      <!-- File input field -->
+      <input type="file" name="file" id="file" accept="image/*" required>
+      <br>
+      <!-- Submit button -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

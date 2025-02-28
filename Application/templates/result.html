@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Ensure proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prediction Result</title>
+  <style>
+    /* General body styling with a gradient background */
+    body {
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #444;
+    }
+    /* Container styling for centered content with a card-like appearance */
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    /* Heading styling with colored text and a subtle shadow */
+    h1 {
+      color: #d32f2f;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    /* Paragraph styling */
+    p {
+      font-size: 18px;
+      color: #424242;
+    }
+    /* Image styling with a border and rounded corners */
+    img {
+      margin-top: 20px;
+      max-width: 300px;
+      border: 3px solid #90a4ae;
+      border-radius: 8px;
+    }
+    /* Link styling with a hover effect */
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #1e88e5;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Result</h1>
+    <!-- Display the predicted class from the model -->
+    <p>{{ prediction }}</p>
+    <!-- Display the uploaded image -->
+    <img src="{{ image_path }}" alt="Uploaded Image">
+    <br>
+    <!-- Link to return to the home page -->
+    <a href="/">Go Back</a>
+  </div>
+</body>
+</html>
